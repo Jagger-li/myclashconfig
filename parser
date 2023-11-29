@@ -31,19 +31,19 @@ parsers: # array
             - REJECT
             - PROXY
             
-        #- name: 绕过大陆丨黑名单(GFWlist)
-         # type: url-test
-          #url: http://www.gstatic.com/generate_204
-          #interval: 86400
-          #proxies:
-           # - DIRECT
+        - name: 绕过大陆丨黑名单(GFWlist)
+          type: url-test
+          url: http://www.gstatic.com/generate_204
+          interval: 86400
+          proxies:
+            - DIRECT
             
-        #- name: 绕过大陆丨白名单(Whitelist)
-         # type: url-test
-          #url: http://www.gstatic.com/generate_204
-          #interval: 86400
-          #proxies:
-           # - PROXY
+        - name: 绕过大陆丨白名单(Whitelist)
+          type: url-test
+          url: http://www.gstatic.com/generate_204
+          interval: 86400
+          proxies:
+            - PROXY
             
         - name: PROXY
           type: url-test

@@ -79,7 +79,7 @@ parsers: # array
       commands:
         - proxy-groups.🔰 选择节点.proxies=[]proxyNames # 向指定策略组添加订阅中的节点名，可使用正则过滤
         - proxy-groups.🔰 选择节点.proxies.0+DIRECT # 向指定分组第一个位置添加一个 DIRECT 节点名
-        - proxy-groups.♻️ 自动选择.proxies=[]proxyNames
+        - proxy-groups.♻️ 自动选择.proxies=[]proxyNames|^(?:(?!流量|耗尽).)*$
         - proxy-groups.🔰 选择节点.proxies.0+♻️ 自动选择
         - proxy-groups.AI节点.proxies=[]proxyNames|TW
 

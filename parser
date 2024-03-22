@@ -56,7 +56,7 @@ parsers: # array
           tolerance: 50
 
         #暂时以台湾节点作为 ai 服务的节点
-        - name: AI节点
+        - name: 🤖 OpenAi
           type: url-test
           url: http://www.gstatic.com/generate_204
           interval: 300
@@ -94,13 +94,51 @@ parsers: # array
       prepend-rules: # 规则由上往下遍历，如上面规则已经命中，则不再往下处理
         - DOMAIN-SUFFIX,aod.itunes.apple.com,DIRECT
         - DOMAIN-SUFFIX,music.apple.com/cn,DIRECT
-        #AI 域名
-        - DOMAIN-SUFFIX,openai.com,AI节点
-        - DOMAIN-SUFFIX,pay.openai.com,AI节点
-        - DOMAIN-SUFFIX,chat.openai.com,AI节点
-        - DOMAIN-SUFFIX,challenges.cloudflare.com,AI节点
-        - DOMAIN-SUFFIX,auth0.openai.com,AI节点
-        - DOMAIN-SUFFIX,platform.openai.com,AI节点
+        
+#AI 域名
+        - DOMAIN-SUFFIX,openai.com,🤖 OpenAi
+        - DOMAIN-SUFFIX,pay.openai.com,🤖 OpenAi
+        - DOMAIN-SUFFIX,chat.openai.com,🤖 OpenAi
+        - DOMAIN-SUFFIX,challenges.cloudflare.com,🤖 OpenAi
+        - DOMAIN-SUFFIX,auth0.openai.com,🤖 OpenAi
+        - DOMAIN-SUFFIX,platform.openai.com,🤖 OpenAi
+
+        - DOMAIN-KEYWORD,openai,🤖 OpenAi
+        - DOMAIN-SUFFIX,auth0.com,🤖 OpenAi
+        - DOMAIN-SUFFIX,challenges.cloudflare.com,🤖 OpenAi
+        - DOMAIN-SUFFIX,client-api.arkoselabs.com,🤖 OpenAi
+        - DOMAIN-SUFFIX,events.statsigapi.net,🤖 OpenAi
+        - DOMAIN-SUFFIX,featuregates.org,🤖 OpenAi
+        - DOMAIN-SUFFIX,identrust.com,🤖 OpenAi
+        - DOMAIN-SUFFIX,intercom.io,🤖 OpenAi
+        - DOMAIN-SUFFIX,intercomcdn.com,🤖 OpenAi
+        - DOMAIN-SUFFIX,oaistatic.com,🤖 OpenAi
+        - DOMAIN-SUFFIX,oaiusercontent.com,🤖 OpenAi
+        - DOMAIN-SUFFIX,openai.com,🤖 OpenAi
+        - DOMAIN-SUFFIX,openaiapi-site.azureedge.net,🤖 OpenAi
+        - DOMAIN-SUFFIX,sentry.io,🤖 OpenAi
+        - DOMAIN-SUFFIX,stripe.com,🤖 OpenAi
+        - DOMAIN-SUFFIX,openai.com,🤖 OpenAi
+        - DOMAIN-SUFFIX,openai.nooc.ink,🤖 OpenAi
+        - DOMAIN-SUFFIX,AI.com,🤖 OpenAi
+        - DOMAIN-SUFFIX,cdn.auth0.com,🤖 OpenAi
+        - DOMAIN-SUFFIX,openaiapi-site.azureedge.net,🤖 OpenAi
+        - DOMAIN-SUFFIX,opendns.com,🤖 OpenAi
+        - DOMAIN-SUFFIX,bing.com,🤖 OpenAi
+        - DOMAIN-SUFFIX,civitai.com,🤖 OpenAi
+        - DOMAIN,bard.google.com,🤖 OpenAi
+        - DOMAIN,ai.google.dev,🤖 OpenAi
+        - DOMAIN,gemini.google.com,🤖 OpenAi
+        - DOMAIN-SUFFIX,googleapis.com,🤖 OpenAi
+        - DOMAIN-SUFFIX,sentry.io,🤖 OpenAi
+        - DOMAIN-SUFFIX,intercom.io,🤖 OpenAi
+        - DOMAIN-SUFFIX,featuregates.org,🤖 OpenAi
+        - DOMAIN-SUFFIX,statsigapi.net,🤖 OpenAi
+        - DOMAIN-SUFFIX,claude.ai,🤖 OpenAi
+        - DOMAIN-SUFFIX,Anthropic.com,🤖 OpenAi
+        - DOMAIN-SUFFIX,opera-api.com,🤖 OpenAi
+
+
         - RULE-SET,applications,DIRECT
         - DOMAIN,clash.razord.top,DIRECT
         - DOMAIN,yacd.haishan.me,DIRECT
